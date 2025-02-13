@@ -1,16 +1,13 @@
-import DateTime
 import sched
 import smtplib
 import time
 from email.mime.text import MIMEText
-
 import schedule
-
-from get import *
-from variables import *
+from special_vars import *
+import requests
 
 def send():
-    msg = MIMEText(get())
+    msg = MIMEText(requests.get("https://api.ipify.org").text)
     msg['From'] = sender_email
     msg['To'] = 'kadlecekemma@gmail.com'
     msg['Subject'] = "IP"
@@ -22,7 +19,7 @@ def send():
         server.sendmail(sender_email, [msg['To']], total)
 
 
-schedule.every(1).minutes.do(send)
+schedule.every(1).day.at_time(time(hour=5))
 
 while True:
     schedule.run_pending()
