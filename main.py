@@ -9,7 +9,7 @@ import requests
 def send():
     msg = MIMEText(requests.get("https://api.ipify.org").text)
     msg['From'] = sender_email
-    msg['To'] = 'kadlecekemma@gmail.com'
+    msg['To'] = receiver_email
     msg['Subject'] = "IP"
 
     total = "YOUR LOCAL IP IS: " + msg.as_string()
