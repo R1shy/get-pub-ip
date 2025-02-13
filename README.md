@@ -26,7 +26,7 @@ add a variable for:
 
 - with the file made run the script with py(thon)(3) depending on your os
 - most linux distros use python
-- mac uses python 3
+- mac uses python3
 - windows uses py
 
 # REALLY IMPORTANT NOTE:
