@@ -27,3 +27,4 @@ while True:
         time.sleep(1)
     except KeyboardInterrupt:
         print("THING STOPPED OH NOES")
+        exit(0)
