@@ -29,9 +29,9 @@ uv sync
 ```
 
 then either use:
-'''bash
+```bash
 uv run main.py # use locally
-'''
+```
 or
 ```bash
 docker compose -f docker-compose.yml up # use -d if you want it to be containerized
