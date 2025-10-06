@@ -6,37 +6,37 @@ This is a python script for getting your public IP (using the ipify API) and ema
 
 Because I don't want to set a static IP for my rasberry pi and I don't want to pay for a DNS.
 
-# Isn't this malware technically?
 
-## NUH UH.
 
 # How do I use this?
 
-- have: python and a wifi connection, maybe a gmail account
-    - this runs on 3.13 I don't want to test for earlier
-- clone the repo using 
-``` git clone htttps://github.com/R1shy/get-pub-ip ```
+- have: python and a internet (wifi or ethernet) connection, maybe a gmail account
 
-- run ``` pip install -r requirements.txt```
-- make a file called ``` special_vars.py ```
-add a variable for:
-    - the sending email
-    - the recieving email
-    - the app password (google how to get it)
+clone the repo using
 
-- with the file made run the script with py(thon)(3) depending on your os
-- most linux distros use python
-- mac uses python3
-- windows uses py
+```bash
+git clone https://github.com/R1shy/get-pub-ip
+```
 
-# REALLY IMPORTANT NOTE:
+go into the dir 
+```bash
+cd get-pub-ip
+```
 
-IF YOUR ON LINUX REMEMBER TO USE A VENV
+get deps (you need uv)
+```bash
+uv sync
+```
 
+then either use:
+'''bash
+uv run main.py # use locally
+'''
+or
+```bash
+docker compose -f docker-compose.yml up # use -d if you want it to be containerized
+```
 
-# License
-
-Please don't use this for malware :)
 
 # Thanks:
 - the people who made the ipify API

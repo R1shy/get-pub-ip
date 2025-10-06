@@ -1,9 +1,10 @@
-import sched
 import smtplib
 import time
 from email.mime.text import MIMEText
-import schedule
-from special_vars import *
+import dotenv
+except ModuleNotFoundError:
+    print("Please make a special special_vars.py file")
+    exit(1)
 import requests
 
 def send():
@@ -19,10 +20,8 @@ def send():
         server.sendmail(sender_email, [msg['To']], total)
 
 
-schedule.every(1).day.at_time(time(hour=5))
 
 while True:
-    schedule.run_pending()
     try:
         time.sleep(1)
     except KeyboardInterrupt:
