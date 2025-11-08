@@ -4,7 +4,7 @@ This is a python script for getting your public IP (using the ipify API) and ema
 
 # Why does this exist?
 
-Because I don't want to set a static IP for my rasberry pi and I don't want to pay for a DNS.
+Because I don't want to set a static IP for my rasberry pi and I don't want to pay for a domain.
 
 
 
