@@ -28,14 +28,11 @@ get deps (you need uv)
 uv sync
 ```
 
-then either use:
+then use:
 ```bash
-uv run main.py # use locally
+uv run main.py 
 ```
-or
-```bash
-docker compose -f docker-compose.yml up # use -d if you want it to be containerized
-```
+
 
 
 # Thanks:
